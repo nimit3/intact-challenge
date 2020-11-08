@@ -4,9 +4,9 @@ In this challnege, I have written down all my code using page object model(POM) 
 
 In POM, there are total 4 different modules.
 
-1. First is data directory. Inside of that, I have created "data.js" file. In data.js file I have written down all the data that are used in this challenge.
+1. First is the data directory. Inside of that, I have created "data.js" file. In data.js file I have written down all the data that are used in this challenge.
 
-2. Second is webPages directory. Inside of that, I have created different webpages JS files, and inside of each file I have stored every webelements along with methods which do specific action(clicking, iserting some value from data, etc).
+2. Second is the webPages directory. Inside of that, I have created different webpages JS files, and inside of each file I have stored every webelements along with methods which do specific action(clicking, iserting some value from data, etc).
 
 3. Third is the test scripts directory. Inside of that, I have created a "policyFillupTestScript.js" file. That is the main file where I have written the main automation script using the protractor. I have imported all the data and webelements from other files and have used them in the scripts here. That's how I have linked all the data and webelements into this main scripts
 
