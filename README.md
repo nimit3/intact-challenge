@@ -13,6 +13,8 @@ In POM, there are total 4 different modules.
 4. At last I have created a "conf.js" file. In that file I have written down capabilities(chrome), framework(jasmine), and the main test script file(policyFillupTestScript.js) that I want to execute using the protractor tool.
 
 For running this code in your machine, you only need to follow given below basic steps.
-step 1 - import his code
-step 2 - run the command "npm install" so all the dependancy can be downloaded
-step 3 - run the command "protractor conf.js"
+step 1 - import his code.
+
+step 2 - run the command "npm install" so all the dependancy can be downloaded.
+
+step 3 - run the command "protractor conf.js".
