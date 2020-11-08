@@ -4,7 +4,6 @@ class StartingPage {
   businessNameField = element(by.xpath("//*[@id='businessName']"));
   businessAddressField = element(by.xpath("//*[@id='typeahead-http-address']"));
   dropdownFirstOption = element(by.xpath("//*[@role='option'][1]"));
-  nextBtn = element(by.buttonText("Next"));
 
   async enterBusinessName(name) {
     await this.businessNameField.sendKeys(name);
@@ -16,10 +15,6 @@ class StartingPage {
 
   async selectFirstAddressOption() {
     await this.dropdownFirstOption.click();
-  }
-
-  async submitNextBtn() {
-    await this.nextBtn.click();
   }
 }
 

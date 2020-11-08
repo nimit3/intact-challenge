@@ -1,4 +1,4 @@
-const { element } = require("protractor");
+const { element, browser } = require("protractor");
 
 class confirmation {
   confirmationMsg = element(by.xpath("//*[@id='thankYouMessage']/span[1]"));

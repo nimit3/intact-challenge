@@ -6,7 +6,6 @@ class detail {
   percentageRevenue = element(by.id("q167"));
   sellComputerAnswer = element(by.id("q170Y-label"));
   sellMainframeComputerAnswer = element(by.id("q171Y-label"));
-  nextBtn = element(by.buttonText("Next"));
   descriptionOfProfession = element(by.id("businessDescriptionTextarea"));
 
   async enterYear(year) {
@@ -27,10 +26,6 @@ class detail {
 
   async selectQuestionTwo() {
     await this.sellMainframeComputerAnswer.click();
-  }
-
-  async submitNextBtn() {
-    await this.nextBtn.click();
   }
 
   async enterbusinessDescription(info) {

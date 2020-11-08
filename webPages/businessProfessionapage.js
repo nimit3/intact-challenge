@@ -5,7 +5,6 @@ class businessProfessionPage {
   businessProfessionNameFirstSelectedOption = element(
     by.xpath("//*[@role='option'][1]")
   );
-  nextBtn = element(by.buttonText("Next"));
 
   async enterBusinessProfessionName(name) {
     await this.businessProfessionNameField.sendKeys(name);
@@ -13,10 +12,6 @@ class businessProfessionPage {
 
   async selectFirstBusinessProfessionOption() {
     await this.businessProfessionNameFirstSelectedOption.click();
-  }
-
-  async submitNextBtn() {
-    await this.nextBtn.click();
   }
 }
 

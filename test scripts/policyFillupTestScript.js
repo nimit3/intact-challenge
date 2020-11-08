@@ -8,6 +8,7 @@ const {
 const { detail } = require("../webPages/detail");
 const { contact } = require("../webPages/contactInfoPage");
 const { confirmation } = require("../webPages/confirmationPage");
+const { commonWebelments } = require("../webPages/commonWebelements");
 
 //importing firstPage class
 const startingpage = new StartingPage();
@@ -19,6 +20,9 @@ const details = new detail();
 const contacts = new contact();
 //importing confirmation class
 const confirmatons = new confirmation();
+//importig common webelemts class
+const commonwebelements = new commonWebelments();
+
 describe("Policy submission test suite", () => {
   beforeAll(async () => {
     await browser.get("https://apps.intactinsurance.com/quick-quote-cl/app/v1");
@@ -30,14 +34,14 @@ describe("Policy submission test suite", () => {
     startingpage.enterBusinessName(data.businessName);
     startingpage.enterBusinessAddress(data.businessAddress);
     startingpage.selectFirstAddressOption();
-    startingpage.submitNextBtn();
-    browser.sleep(500);
+    commonwebelements.enterNextBtn();
+    browser.sleep(700);
     //business profession selection page scripts
     businessProfessionpage.enterBusinessProfessionName(
       data.businessProfessionName
     );
     businessProfessionpage.selectFirstBusinessProfessionOption();
-    businessProfessionpage.submitNextBtn();
+    commonwebelements.enterNextBtn();
     browser.sleep(500);
     //business details page scripts
     details.enterYear(data.yearEstablished);
@@ -45,10 +49,10 @@ describe("Policy submission test suite", () => {
     details.enterpercentageRevenue(data.revenuePercentage);
     details.selectQuestionOne();
     details.selectQuestionTwo();
-    details.submitNextBtn();
+    commonwebelements.enterNextBtn();
     browser.sleep(500);
     details.enterbusinessDescription(data.businessInfo);
-    details.submitNextBtn();
+    commonwebelements.enterNextBtn();
     browser.sleep(500);
     //contact information page scripts
     contacts.enterTitle();
@@ -57,8 +61,12 @@ describe("Policy submission test suite", () => {
     contacts.enterPhoneNumber(data.contactno);
     contacts.enteremail(data.email);
     contacts.selectTerms();
-    contacts.submitbtn();
-    browser.sleep(500);
+    contacts.enterSubmitBtn();
+    browser.sleep(1000);
     confirmatons.verifyPolicySubmission();
+
+    afterAll(async () => {
+      await browser.close();
+    });
   });
 });

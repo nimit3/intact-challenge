@@ -33,7 +33,7 @@ class contact {
     await this.termsAgreeCheckbox.click();
   }
 
-  async submitbtn() {
+  async enterSubmitBtn() {
     await this.submitBtn.click();
   }
 }
