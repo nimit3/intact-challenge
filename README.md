@@ -15,6 +15,8 @@ In POM, there are total 4 different modules.
 For running this code in your machine, you only need to follow given below basic steps.
 step 1 - import his code.
 
-step 2 - run the command "npm install" so all the dependancy can be downloaded.
+step 2 - run the command "npm install -g protractor" (if protractor is not installed globally in your machine)
 
-step 3 - run the command "protractor conf.js".
+step 3 - run the command "npm install" so all the dependancy can be downloaded.
+
+step 4 - run the command "protractor conf.js" to see the automation.
