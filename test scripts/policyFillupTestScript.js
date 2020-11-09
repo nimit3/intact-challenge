@@ -63,6 +63,7 @@ describe("Policy submission test suite", () => {
     contacts.selectTerms();
     contacts.enterSubmitBtn();
     browser.sleep(1000);
+    //verify that test script passed or not
     confirmatons.verifyPolicySubmission();
 
     afterAll(async () => {
